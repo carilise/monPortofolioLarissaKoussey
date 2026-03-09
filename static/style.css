@@ -1123,3 +1123,310 @@ footer {
 .p-color.visible::after {
     transform: scaleX(1);
 }
+
+/* ══════════════════════════════════
+   RESPONSIVE — TABLETTE (max 1024px)
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    #hero {
+        padding: 6rem 2rem 3rem;
+    }
+
+    .hero-left h1 {
+        font-size: 3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — TABLETTE (max 768px)
+══════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    /* HERO */
+    #hero {
+        padding: 5rem 1.5rem 3rem;
+        min-height: auto;
+    }
+
+    .hero-div {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-card {
+        max-width: 380px;
+        margin: 0 auto;
+        animation: none;
+    }
+
+    /* ABOUT */
+    #about {
+        padding: 4rem 1.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* SKILLS */
+    #skills {
+        padding: 4rem 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROJETS */
+    #projects {
+        padding: 4rem 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* BEYOND */
+    #beyond {
+        padding: 4rem 1.5rem;
+    }
+
+    .beyond-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* CONTACT */
+    #contact {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+
+    /* H2 */
+    .h2 {
+        font-size: 2.2rem;
+    }
+
+    /* POPUP */
+    .profile-overlay-popup {
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .popup-image {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — MOBILE (max 480px)
+══════════════════════════════════ */
+@media (max-width: 480px) {
+
+    /* NAV — cacher les liens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 62px;
+        left: 0;
+        right: 0;
+        background: rgba(240, 239, 234, 0.98);
+        backdrop-filter: blur(12px);
+        padding: 1.5rem 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        z-index: 99;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    /* BURGER */
+    .burger {
+        display: flex;
+    }
+
+    /* HERO */
+    #hero {
+        padding: 5rem 1rem 2rem;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-orange,
+    .btn-outline {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* PROFILE CARD */
+    .profile-card {
+        max-width: 100%;
+        animation: none;
+    }
+
+    .profile-image-wrap {
+        height: 220px;
+    }
+
+    /* ABOUT */
+    #about {
+        padding: 3rem 1rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* SKILLS */
+    #skills {
+        padding: 3rem 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* PROJETS */
+    #projects {
+        padding: 3rem 1rem;
+    }
+
+    /* BEYOND */
+    #beyond {
+        padding: 3rem 1rem;
+    }
+
+    .laristore-items {
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACT */
+    #contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* H2 */
+    .h2 {
+        font-size: 1.8rem;
+    }
+
+    /* POPUP */
+    .profile-overlay-popup {
+        width: 95vw;
+        max-height: 85vh;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .popup-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    
+}
+
+/* ══════════════════════════════════
+   BURGER — visible seulement mobile
+══════════════════════════════════ */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+}
+
+.burger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Afficher le burger sur tablette ET mobile */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 62px; left: 0; right: 0;
+        background: rgba(240, 239, 234, 0.98);
+        backdrop-filter: blur(12px);
+        padding: 1.5rem 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        z-index: 99;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* Animation burger ouvert */
+.burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+.burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
