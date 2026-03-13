@@ -13,7 +13,7 @@ profiles = {
     "email": "larissakousseypro@email.com",
     "linkedin": "https://bj.linkedin.com/in/larissa-koussey-772109385",
     "github": "https://github.com/carilise",
-    "formation": "Systeme informatique et logitiel",
+    "formation": "Systeme informatique et logiciel",
     "langues": "Français, Anglais",
     "apprentissage": "Python, PostgreSQL",
 }
