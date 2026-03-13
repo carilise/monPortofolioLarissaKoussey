@@ -30,9 +30,9 @@ if (profileCard && overlayPopup && overlayBg) {
   });
 }
 
-// ── Lien actif dans la nav au scroll ──
+// ── NAV ACTIVE AU SCROLL ──
+const navLinksActive = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("section[id]");
-const navLinksActive = document.querySelectorAll(".nav-links a"); // ← renommé
 
 const navObserver = new IntersectionObserver(
   (entries) => {
@@ -46,8 +46,16 @@ const navObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.4 },
+  {
+    threshold: 0.2,
+    rootMargin: "-62px 0px -40% 0px",
+  },
 );
+
+sections.forEach((section) => navObserver.observe(section));
+
+// Observer toutes les sections
+sections.forEach((section) => navObserver.observe(section));
 
 sections.forEach((section) => navObserver.observe(section));
 
